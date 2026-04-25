@@ -42,13 +42,6 @@ config.keys = {
   { key = "_", mods = "CMD", action = wezterm.action.SendKey({ key = "_", mods = "CTRL" }) },
 }
 
-  config.keys = {
-    -- Cmd+S → Ctrl+S に変換（Neovimの保存に対応）
-    { key = "s", mods = "CMD", action = wezterm.action.SendKey({ key = "s",
-  mods = "CTRL" }) },
-  }
-
-
 config.window_background_opacity = 0.85
 
 config.show_tabs_in_tab_bar = false
