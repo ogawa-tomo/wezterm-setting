@@ -36,7 +36,18 @@ config.keys = {
       end
     end),
   },
+  -- cmd + s（保存）, cmd + a（全選択）, cmd + /（コメントアウト）をctrlに変換してNeovimでも使えるようにする
+  { key = "s", mods = "CMD", action = wezterm.action.SendKey({ key = "s", mods = "CTRL" }) },
+  { key = "a", mods = "CMD", action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }) },
+  { key = "_", mods = "CMD", action = wezterm.action.SendKey({ key = "_", mods = "CTRL" }) },
 }
+
+  config.keys = {
+    -- Cmd+S → Ctrl+S に変換（Neovimの保存に対応）
+    { key = "s", mods = "CMD", action = wezterm.action.SendKey({ key = "s",
+  mods = "CTRL" }) },
+  }
+
 
 config.window_background_opacity = 0.85
 
