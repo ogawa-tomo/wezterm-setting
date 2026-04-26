@@ -47,8 +47,12 @@ config.window_background_opacity = 0.85
 config.show_tabs_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
-config.font = wezterm.font("Hack Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})
+-- config.font = wezterm.font("Hack Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})
+-- config.font = wezterm.font("JetBrains Mono Nerd Font")
+config.font = wezterm.font("HackGen35 Console NF")
+-- config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 -- config.font = wezterm.font("GohuFont 14 Nerd Font", {weight="Medium", stretch="Normal", style="Normal"})
-
+-- config.font = wezterm.font("hoge font") -- Nerd Font版の名前
+-- config.font = wezterm.font("CaskaydiaCove Nerd Font") -- Nerd Font版の名前
 -- Finally, return the configuration to wezterm:
 return config
