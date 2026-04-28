@@ -20,6 +20,6 @@ https://github.com/yuru7/HackGen
 
 上記のGitHubページからttfファイルをダウンロード（Nerd Fonts合成版を選ぶ）
 
-`HackGen35ConsoleNF-Regular.ttf`を右クリックしてインストール
+`HackGenConsoleNF-Bold.ttf`を右クリックしてインストール
 
 ※フォントアップデートの際は上記ダウンロードページにあるように既存フォントファイルを削除してから新規インストールするとよい
