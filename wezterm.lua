@@ -42,8 +42,8 @@ config.keys = {
   { key = "/", mods = "CMD", action = wezterm.action.SendKey({ key = "/", mods = "CTRL" }) },
 }
 
-config.window_background_opacity = 0.8
-
+-- config.window_background_opacity = 0.8
+config.color_scheme = 'Tokyo Night Moon'
 config.show_tabs_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
