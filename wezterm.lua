@@ -14,7 +14,6 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 10
--- config.color_scheme = 'AdventureTime'
 
 -- ctrl vとctrl cでコピーペースト
 config.keys = {
@@ -42,9 +41,8 @@ config.keys = {
   { key = "/", mods = "CMD", action = wezterm.action.SendKey({ key = "/", mods = "CTRL" }) },
 }
 
--- config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.color_scheme = 'Tokyo Night Moon'
-config.show_tabs_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- config.font = wezterm.font("Hack Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})
