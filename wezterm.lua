@@ -49,6 +49,12 @@ config.hide_tab_bar_if_only_one_tab = true
 -- config.font = wezterm.font("JetBrains Mono Nerd Font")
 -- config.font = wezterm.font("HackGen Console NF")
 config.font = wezterm.font("HackGen Console NF", {weight="Bold", stretch="Normal", style="Normal"})
+config.font_rules = {
+  {
+    italic = true,
+    font = wezterm.font("HackGen Console NF", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+  },
+}
 -- config.font = wezterm.font("HackGen35 Console NF")
 -- config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 -- config.font = wezterm.font("GohuFont 14 Nerd Font", {weight="Medium", stretch="Normal", style="Normal"})
