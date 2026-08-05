@@ -6,6 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
+-- Windowsの場合は適当なWSLを指定する。Macの場合はコメントアウト。
 config.default_domain = 'WSL:Debian'
 
 -- For example, changing the initial geometry for new windows:
