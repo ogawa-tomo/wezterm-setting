@@ -1,11 +1,12 @@
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
+-- Windowsの場合は適当なWSLを指定する。Macの場合はコメントアウト。
 config.default_domain = 'WSL:Debian'
 
 -- For example, changing the initial geometry for new windows:
@@ -17,45 +18,45 @@ config.font_size = 10
 
 -- ctrl vとctrl cでコピーペースト
 config.keys = {
-  {
-    key = 'v',
-    mods = 'CTRL',
-    action = wezterm.action.PasteFrom 'Clipboard',
-  },
-  {
-    key = 'c',
-    mods = 'CTRL',
-    action = wezterm.action_callback(function(window, pane)
-      local has_selection = window:get_selection_text_for_pane(pane) ~= ""
-      if has_selection then
-        window:perform_action(wezterm.action.CopyTo 'ClipboardAndPrimarySelection', pane)
-        window:perform_action(wezterm.action.ClearSelection, pane)
-      else
-        window:perform_action(wezterm.action.SendKey { key = 'c', mods = 'CTRL' }, pane)
-      end
-    end),
-  },
-  -- cmd + s（保存）, cmd + a（全選択）, cmd + /（コメントアウト）をctrlに変換してNeovimでも使えるようにする
-  { key = "s", mods = "CMD", action = wezterm.action.SendKey({ key = "s", mods = "CTRL" }) },
-  { key = "a", mods = "CMD", action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }) },
-  { key = "/", mods = "CMD", action = wezterm.action.SendKey({ key = "/", mods = "CTRL" }) },
-  -- alt + enterのフルスクリーン切り替えを無効化し、そのままアプリ側（Claude Codeの改行など）に渡す
+	{
+		key = "v",
+		mods = "CTRL",
+		action = wezterm.action.PasteFrom("Clipboard"),
+	},
+	{
+		key = "c",
+		mods = "CTRL",
+		action = wezterm.action_callback(function(window, pane)
+			local has_selection = window:get_selection_text_for_pane(pane) ~= ""
+			if has_selection then
+				window:perform_action(wezterm.action.CopyTo("ClipboardAndPrimarySelection"), pane)
+				window:perform_action(wezterm.action.ClearSelection, pane)
+			else
+				window:perform_action(wezterm.action.SendKey({ key = "c", mods = "CTRL" }), pane)
+			end
+		end),
+	},
+	-- cmd + s（保存）, cmd + a（全選択）, cmd + /（コメントアウト）をctrlに変換してNeovimでも使えるようにする
+	{ key = "s", mods = "CMD", action = wezterm.action.SendKey({ key = "s", mods = "CTRL" }) },
+	{ key = "a", mods = "CMD", action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }) },
+	{ key = "/", mods = "CMD", action = wezterm.action.SendKey({ key = "/", mods = "CTRL" }) },
+   -- alt + enterのフルスクリーン切り替えを無効化し、そのままアプリ側（Claude Codeの改行など）に渡す
   { key = "Enter", mods = "ALT", action = wezterm.action.DisableDefaultAssignment },
 }
 
 config.window_background_opacity = 0.9
-config.color_scheme = 'Tokyo Night Moon'
+config.color_scheme = "Tokyo Night Moon"
 config.hide_tab_bar_if_only_one_tab = true
 
 -- config.font = wezterm.font("Hack Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})
 -- config.font = wezterm.font("JetBrains Mono Nerd Font")
 -- config.font = wezterm.font("HackGen Console NF")
-config.font = wezterm.font("HackGen Console NF", {weight="Bold", stretch="Normal", style="Normal"})
+config.font = wezterm.font("HackGen Console NF", { weight = "Bold", stretch = "Normal", style = "Normal" })
 config.font_rules = {
-  {
-    italic = true,
-    font = wezterm.font("HackGen Console NF", { weight = "Bold", stretch = "Normal", style = "Normal" }),
-  },
+	{
+		italic = true,
+		font = wezterm.font("HackGen Console NF", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+	},
 }
 -- config.font = wezterm.font("HackGen35 Console NF")
 -- config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
