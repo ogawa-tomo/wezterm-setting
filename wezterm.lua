@@ -44,7 +44,7 @@ config.keys = {
   { key = "Enter", mods = "ALT", action = wezterm.action.DisableDefaultAssignment },
 }
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 config.color_scheme = "Tokyo Night Moon"
 config.hide_tab_bar_if_only_one_tab = true
 
