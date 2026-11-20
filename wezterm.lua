@@ -40,8 +40,8 @@ config.keys = {
 	{ key = "s", mods = "CMD", action = wezterm.action.SendKey({ key = "s", mods = "CTRL" }) },
 	{ key = "a", mods = "CMD", action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }) },
 	{ key = "/", mods = "CMD", action = wezterm.action.SendKey({ key = "/", mods = "CTRL" }) },
-   -- alt + enterのフルスクリーン切り替えを無効化し、そのままアプリ側（Claude Codeの改行など）に渡す
-  { key = "Enter", mods = "ALT", action = wezterm.action.DisableDefaultAssignment },
+	-- alt + enterのフルスクリーン切り替えを無効化し、そのままアプリ側（Claude Codeの改行など）に渡す
+	{ key = "Enter", mods = "ALT", action = wezterm.action.DisableDefaultAssignment },
 }
 
 config.window_background_opacity = 0.95
